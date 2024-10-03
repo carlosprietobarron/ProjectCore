@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Persistence;
+using Dominion;
+
+namespace Webapi.Controllers
+{
+    [Route("[controller]")]
+    public class Weather : Controller
+    {
+        private readonly ILogger<Weather> _logger;
+        private readonly CoursesContext? _context;
+
+        public Weather(ILogger<Weather> logger, CoursesContext context)
+        {
+            _logger = logger;
+            _context = context;
+        }
+
+    [HttpGet]
+    public IEnumerable<Course> Get(){
+        return this._context.Course.ToList();
+    }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View("Error!");
+        }
+    }
+}

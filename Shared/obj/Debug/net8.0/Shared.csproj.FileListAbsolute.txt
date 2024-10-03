@@ -1,0 +1,11 @@
+/Users/carlosprieto/NET/ProjectCore/Shared/bin/Debug/net8.0/Shared.deps.json
+/Users/carlosprieto/NET/ProjectCore/Shared/bin/Debug/net8.0/Shared.dll
+/Users/carlosprieto/NET/ProjectCore/Shared/bin/Debug/net8.0/Shared.pdb
+/Users/carlosprieto/NET/ProjectCore/Shared/obj/Debug/net8.0/Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/carlosprieto/NET/ProjectCore/Shared/obj/Debug/net8.0/Shared.AssemblyInfoInputs.cache
+/Users/carlosprieto/NET/ProjectCore/Shared/obj/Debug/net8.0/Shared.AssemblyInfo.cs
+/Users/carlosprieto/NET/ProjectCore/Shared/obj/Debug/net8.0/Shared.csproj.CoreCompileInputs.cache
+/Users/carlosprieto/NET/ProjectCore/Shared/obj/Debug/net8.0/Shared.dll
+/Users/carlosprieto/NET/ProjectCore/Shared/obj/Debug/net8.0/refint/Shared.dll
+/Users/carlosprieto/NET/ProjectCore/Shared/obj/Debug/net8.0/Shared.pdb
+/Users/carlosprieto/NET/ProjectCore/Shared/obj/Debug/net8.0/ref/Shared.dll
