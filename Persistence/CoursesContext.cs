@@ -29,7 +29,7 @@ namespace Persistence
         public DbSet<Comentary> Comentary   { get; set; }
         public DbSet<Course> Course { get; set; }
         public DbSet<Teacher> Teacher { get; set; }
-        public DbSet<CourseTeacher> TeacherTeacher { get; set;}
+        public DbSet<CourseTeacher> CourseTeacher { get; set;}
         public DbSet<Price> Price { get; set; }
 
     }

@@ -162,3 +162,6 @@
 /Users/carlosprieto/NET/ProjectCore/Webapi/obj/Debug/net8.0/Webapi.pdb
 /Users/carlosprieto/NET/ProjectCore/Webapi/obj/Debug/net8.0/Webapi.genruntimeconfig.cache
 /Users/carlosprieto/NET/ProjectCore/Webapi/obj/Debug/net8.0/ref/Webapi.dll
+/Users/carlosprieto/NET/ProjectCore/Webapi/bin/Debug/net8.0/Microsoft.Bcl.TimeProvider.dll
+/Users/carlosprieto/NET/ProjectCore/Webapi/bin/Debug/net8.0/Security.dll
+/Users/carlosprieto/NET/ProjectCore/Webapi/bin/Debug/net8.0/Security.pdb

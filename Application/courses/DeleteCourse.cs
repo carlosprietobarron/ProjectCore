@@ -12,7 +12,7 @@ namespace Application.courses
     public class DeleteCourse
     {
          public class Execute: IRequest{
-            public int Id { get; set; }
+            public Guid Id { get; set; }
         }
 
 
@@ -24,7 +24,23 @@ namespace Application.courses
             }
             public async Task<Unit> Handle(Execute request, CancellationToken cancellationToken)
             {
+                var teachers = _context.CourseTeacher.Where(l => l.CourseId == request.Id).ToList();
+                foreach (var teacher in teachers)
+                {
+                    _context.CourseTeacher.Remove(teacher);
+                }
+
+                var comentaries = _context.Comentary.Where(l => l.CourseId == request.Id).ToList();
+                foreach (var comentary in comentaries)
+                {
+                    _context.Comentary.Remove(comentary);
+                }
+
+                var price = _context.Price.Where(l => l.CourseId == request.Id).FirstOrDefault();
+                if(price != null) _context.Price.Remove(price);
+
                 var course = await _context.Course.FindAsync(request.Id);
+
 
                 if (course == null) {
                     //throw new Exception("Course not found, nor deleted");

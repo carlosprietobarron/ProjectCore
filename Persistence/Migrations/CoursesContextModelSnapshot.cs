@@ -84,7 +84,7 @@ namespace Persistence.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("TeacherTeacher");
+                    b.ToTable("CourseTeacher");
                 });
 
             modelBuilder.Entity("Dominion.Price", b =>
