@@ -1,0 +1,12 @@
+/Users/carlosprieto/NET/ProjectCore/Dominion/bin/Release/net8.0/Dominion.deps.json
+/Users/carlosprieto/NET/ProjectCore/Dominion/bin/Release/net8.0/Dominion.dll
+/Users/carlosprieto/NET/ProjectCore/Dominion/bin/Release/net8.0/Dominion.pdb
+/Users/carlosprieto/NET/ProjectCore/Dominion/obj/Release/net8.0/Dominion.csproj.AssemblyReference.cache
+/Users/carlosprieto/NET/ProjectCore/Dominion/obj/Release/net8.0/Dominion.GeneratedMSBuildEditorConfig.editorconfig
+/Users/carlosprieto/NET/ProjectCore/Dominion/obj/Release/net8.0/Dominion.AssemblyInfoInputs.cache
+/Users/carlosprieto/NET/ProjectCore/Dominion/obj/Release/net8.0/Dominion.AssemblyInfo.cs
+/Users/carlosprieto/NET/ProjectCore/Dominion/obj/Release/net8.0/Dominion.csproj.CoreCompileInputs.cache
+/Users/carlosprieto/NET/ProjectCore/Dominion/obj/Release/net8.0/Dominion.dll
+/Users/carlosprieto/NET/ProjectCore/Dominion/obj/Release/net8.0/refint/Dominion.dll
+/Users/carlosprieto/NET/ProjectCore/Dominion/obj/Release/net8.0/Dominion.pdb
+/Users/carlosprieto/NET/ProjectCore/Dominion/obj/Release/net8.0/ref/Dominion.dll

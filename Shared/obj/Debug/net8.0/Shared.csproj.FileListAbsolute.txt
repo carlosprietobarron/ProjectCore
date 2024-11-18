@@ -9,3 +9,4 @@
 /Users/carlosprieto/NET/ProjectCore/Shared/obj/Debug/net8.0/refint/Shared.dll
 /Users/carlosprieto/NET/ProjectCore/Shared/obj/Debug/net8.0/Shared.pdb
 /Users/carlosprieto/NET/ProjectCore/Shared/obj/Debug/net8.0/ref/Shared.dll
+/Users/carlosprieto/NET/ProjectCore/Shared/obj/Debug/net8.0/Shared.sourcelink.json

@@ -1,0 +1,3 @@
+/Users/carlosprieto/NET/ProjectCore/Shared/bin/Release/net8.0/publish/Shared.dll
+/Users/carlosprieto/NET/ProjectCore/Shared/bin/Release/net8.0/publish/Shared.deps.json
+/Users/carlosprieto/NET/ProjectCore/Shared/bin/Release/net8.0/publish/Shared.pdb

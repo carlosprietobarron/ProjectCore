@@ -6,44 +6,49 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Dominion;
 using Application.courses;
+using Microsoft.AspNetCore.Authorization;
+using Persistence.DapperConnection.pagination;
 
 namespace Webapi.Controllers
 {
-    
-    public class CourseControiler: ControllerBase
+    [Route("api/[controller]")]
+    public class CourseController: MyControllerBase
     {
-        public readonly IMediator _mediator;
-        public CourseControiler(IMediator mediator){
-            _mediator = mediator;
-        }
 
         [HttpGet]
-        public async Task<ActionResult<List<Course>>> Get(){
-                var courses = await _mediator.Send(new CourseQuery.CoursesList());
+        // [Authorize] vamos a crear una autorizacion global
+        public async Task<ActionResult<List<CourseDTO>>> Get(){
+                var courses = await Mediator.Send(new CourseQuery.CoursesList());
 
                 return courses;
         }
 
         [HttpGet("{id}")]
-        public async Task<Course> Detail(int id){
-            return await _mediator.Send(new CourseIdQuery.CourseById(id));
+        public async Task<CourseDTO> Detail(Guid id){
+            return await Mediator.Send(new CourseIdQuery.CourseById(id));
         }
 
-        [HttpPost]
+        [HttpPost("create")]
         public async Task<ActionResult<Unit>> Create(NewCourse.Execute data){
-            return await _mediator.Send(data);
+            return await Mediator.Send(data);
         }
 
-        [HttpPut]
-        public async Task<ActionResult<Unit>> Update(int id, UpdateCourse.Execute data){
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Unit>> Update([FromRoute]Guid id, [FromBody]UpdateCourse.Execute data){
             data.CourseId = id;
-            return await _mediator.Send(data);
-        } 
+        return await Mediator.Send(data);
+        }
 
-        [HttpDelete]
-        public async Task<ActionResult<Unit>> Delete(int id){
-            return await _mediator.Send(new DeleteCourse.Execute { Id = id });
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Unit>> Delete(Guid id){
+            return await Mediator.Send(new DeleteCourse.Execute { Id = id });
             
         }
+
+        [HttpPost("Report")]
+        public async Task<ActionResult<PageModel>> Report(CoursePage.Execute data){
+            return await Mediator.Send(data);
+        }
+
     }
 }

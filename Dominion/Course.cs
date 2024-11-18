@@ -14,6 +14,8 @@ namespace Dominion
         public byte[]? FrontPhoto  { get; set; }
 
         public Price? SalesPrice { get; set; }
+
+        public DateTime? CreatedDate { get; set; }
         public ICollection<Comentary>? Comentaries { get; set; } 
         public ICollection<CourseTeacher>? TeacherLinks { get; set; }
         

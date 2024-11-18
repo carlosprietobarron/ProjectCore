@@ -1,0 +1,17 @@
+/Users/carlosprieto/NET/ProjectCore/Persistence/bin/Release/net8.0/Persistence.deps.json
+/Users/carlosprieto/NET/ProjectCore/Persistence/bin/Release/net8.0/Persistence.runtimeconfig.json
+/Users/carlosprieto/NET/ProjectCore/Persistence/bin/Release/net8.0/Persistence.dll
+/Users/carlosprieto/NET/ProjectCore/Persistence/bin/Release/net8.0/Persistence.pdb
+/Users/carlosprieto/NET/ProjectCore/Persistence/bin/Release/net8.0/Dominion.dll
+/Users/carlosprieto/NET/ProjectCore/Persistence/bin/Release/net8.0/Dominion.pdb
+/Users/carlosprieto/NET/ProjectCore/Persistence/obj/Release/net8.0/Persistence.csproj.AssemblyReference.cache
+/Users/carlosprieto/NET/ProjectCore/Persistence/obj/Release/net8.0/Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/Users/carlosprieto/NET/ProjectCore/Persistence/obj/Release/net8.0/Persistence.AssemblyInfoInputs.cache
+/Users/carlosprieto/NET/ProjectCore/Persistence/obj/Release/net8.0/Persistence.AssemblyInfo.cs
+/Users/carlosprieto/NET/ProjectCore/Persistence/obj/Release/net8.0/Persistence.csproj.CoreCompileInputs.cache
+/Users/carlosprieto/NET/ProjectCore/Persistence/obj/Release/net8.0/Persiste.61C28332.Up2Date
+/Users/carlosprieto/NET/ProjectCore/Persistence/obj/Release/net8.0/Persistence.dll
+/Users/carlosprieto/NET/ProjectCore/Persistence/obj/Release/net8.0/refint/Persistence.dll
+/Users/carlosprieto/NET/ProjectCore/Persistence/obj/Release/net8.0/Persistence.pdb
+/Users/carlosprieto/NET/ProjectCore/Persistence/obj/Release/net8.0/Persistence.genruntimeconfig.cache
+/Users/carlosprieto/NET/ProjectCore/Persistence/obj/Release/net8.0/ref/Persistence.dll

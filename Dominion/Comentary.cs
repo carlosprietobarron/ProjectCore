@@ -13,6 +13,8 @@ namespace Dominion
         public string? ComentaryText { get; set; }
         public Guid CourseId { get; set; }
 
-        public required Course Course { get; set; }
+        public DateTime? CreateDate { get; set; }
+
+        public Course? Course { get; set; }
     }
 }

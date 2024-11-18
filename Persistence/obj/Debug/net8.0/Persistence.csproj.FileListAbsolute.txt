@@ -15,3 +15,4 @@
 /Users/carlosprieto/NET/ProjectCore/Persistence/obj/Debug/net8.0/Persistence.pdb
 /Users/carlosprieto/NET/ProjectCore/Persistence/obj/Debug/net8.0/Persistence.genruntimeconfig.cache
 /Users/carlosprieto/NET/ProjectCore/Persistence/obj/Debug/net8.0/ref/Persistence.dll
+/Users/carlosprieto/NET/ProjectCore/Persistence/obj/Debug/net8.0/Persistence.sourcelink.json

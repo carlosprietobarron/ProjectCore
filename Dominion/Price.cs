@@ -15,6 +15,6 @@ namespace Dominion
         [Column(TypeName = "decimal(18,4)")]
         public decimal PromotionalPrice { get; set; }
         public  Guid CourseId { get; set; }
-        public required Course Course { get; set; }
+        public Course Course { get; set; }
     }
 }
