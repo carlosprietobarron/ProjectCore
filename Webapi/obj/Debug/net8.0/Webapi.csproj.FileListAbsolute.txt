@@ -165,3 +165,4 @@
 /Users/carlosprieto/NET/ProjectCore/Webapi/bin/Debug/net8.0/Microsoft.Bcl.TimeProvider.dll
 /Users/carlosprieto/NET/ProjectCore/Webapi/bin/Debug/net8.0/Security.dll
 /Users/carlosprieto/NET/ProjectCore/Webapi/bin/Debug/net8.0/Security.pdb
+/Users/carlosprieto/NET/ProjectCore/Webapi/obj/Debug/net8.0/Webapi.sourcelink.json

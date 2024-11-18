@@ -7,10 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Dominion;
 using Application.courses;
 using Microsoft.AspNetCore.Authorization;
+using Persistence.DapperConnection.pagination;
 
 namespace Webapi.Controllers
 {
-    
+    [Route("api/[controller]")]
     public class CourseController: MyControllerBase
     {
 
@@ -27,21 +28,27 @@ namespace Webapi.Controllers
             return await Mediator.Send(new CourseIdQuery.CourseById(id));
         }
 
-        [HttpPost]
+        [HttpPost("create")]
         public async Task<ActionResult<Unit>> Create(NewCourse.Execute data){
             return await Mediator.Send(data);
         }
 
-        [HttpPut]
-        public async Task<ActionResult<Unit>> Update(Guid id, UpdateCourse.Execute data){
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Unit>> Update([FromRoute]Guid id, [FromBody]UpdateCourse.Execute data){
             data.CourseId = id;
-            return await Mediator.Send(data);
-        } 
+        return await Mediator.Send(data);
+        }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<ActionResult<Unit>> Delete(Guid id){
             return await Mediator.Send(new DeleteCourse.Execute { Id = id });
             
         }
+
+        [HttpPost("Report")]
+        public async Task<ActionResult<PageModel>> Report(CoursePage.Execute data){
+            return await Mediator.Send(data);
+        }
+
     }
 }

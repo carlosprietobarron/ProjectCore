@@ -10,6 +10,7 @@ using Dominion;
 
 namespace Webapi.Controllers
 {
+    [Route("api/[controller]")]
     [Route("[controller]")]
     public class Weather : Controller
     {

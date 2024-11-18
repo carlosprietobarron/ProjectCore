@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Webapi.Controllers
 {
-    [Route("/api/(controller)")]
+    
     [ApiController]
     public class MyControllerBase: ControllerBase
     {

@@ -10,3 +10,4 @@
 /Users/carlosprieto/NET/ProjectCore/Dominion/obj/Debug/net8.0/Dominion.pdb
 /Users/carlosprieto/NET/ProjectCore/Dominion/obj/Debug/net8.0/ref/Dominion.dll
 /Users/carlosprieto/NET/ProjectCore/Dominion/obj/Debug/net8.0/Dominion.csproj.AssemblyReference.cache
+/Users/carlosprieto/NET/ProjectCore/Dominion/obj/Debug/net8.0/Dominion.sourcelink.json

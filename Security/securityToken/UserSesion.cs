@@ -10,7 +10,7 @@ namespace Security.securityToken
 {
     public class UserSesion : IUserSesion
     {
-        private readonly    IHttpContextAccessor _httpContextAccessor;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         public UserSesion(IHttpContextAccessor accessor){
             _httpContextAccessor = accessor;
         }

@@ -51,6 +51,9 @@ public class Handler : IRequestHandler<Execute, UserData>
         }
 
         var result = await _signInManager.CheckPasswordSignInAsync(user, request.Password, false);
+        var resultlist = await _userManager.GetRolesAsync(user);
+        var roles = new List<string>(resultlist);
+    
 
         if (result.Succeeded)
         {
@@ -60,7 +63,7 @@ public class Handler : IRequestHandler<Execute, UserData>
                 FullName = user.FullName,
                 Email = user.Email,
                 UserName = user.UserName,
-                Token = _jwtGenerator.CreateToken(user)
+                Token = _jwtGenerator.CreateToken(user, roles )
                 // Puedes añadir más campos si los necesitas
             };
             return userData;

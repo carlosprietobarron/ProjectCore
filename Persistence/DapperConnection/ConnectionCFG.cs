@@ -7,6 +7,6 @@ namespace Persistence.DapperConnection
 {
     public class ConnectionCFG
     {
-        public string ConnectionSQL { get; set; }
+        public string DefaultConnection { get; set; }
     }
 }

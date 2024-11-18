@@ -20,6 +20,7 @@ using Persistence.DapperConnection;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Persistence.DapperConnection.Teacher;
+using Persistence.DapperConnection.pagination;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,6 +45,10 @@ builder.Services.AddControllers().AddFluentValidation(cfg => {
 //user identity service
 var idBuilder = builder.Services.AddIdentityCore<User>();
 var identityBuilder = new IdentityBuilder(idBuilder.UserType, idBuilder.Services);
+identityBuilder.AddRoles<IdentityRole>();
+identityBuilder.AddClaimsPrincipalFactory<UserClaimsPrincipalFactory<User, IdentityRole>>();
+
+
 identityBuilder.AddEntityFrameworkStores<CoursesContext>();
 identityBuilder.AddSignInManager<SignInManager<User>>();
 builder.Services.AddSingleton<TimeProvider>(TimeProvider.System);
@@ -52,13 +57,23 @@ builder.Services.AddSingleton<TimeProvider>(TimeProvider.System);
 // MediatR
 builder.Services.AddMediatR(typeof(CourseQuery.Handler));
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { 
+        Title = "Courses API", 
+        Version = "v1" 
+    });
+    
+    
+    c.CustomSchemaIds(type => type.FullName);
+});
 builder.Services.AddScoped<IJwtGenerator, JwtGenerator>();
 builder.Services.AddScoped<IUserSesion,UserSesion>();
 builder.Services.AddAutoMapper(typeof(CourseQuery.Handler));
 //para agregar dapper
 builder.Services.AddOptions();
-builder.Services.Configure<ConnectionCFG>(builder.Configuration.GetSection("DefaultConnection"));
+builder.Services.Configure<ConnectionCFG>(builder.Configuration.GetSection("ConnectionStrings"));
 
 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("your-secret-key"));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>{
@@ -70,10 +85,26 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 
+builder.Services.AddCors(options => 
+{
+    options.AddPolicy("AllowAll", 
+        builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
+
+
+
 builder.Services.AddTransient<IFactioryConnection, FactoryConnection>();
 builder.Services.AddScoped<ITeacher, TeacherRepo>();
+builder.Services.AddScoped<IPagination,PageRepository>();
 
 var app = builder.Build();
+
+app.UseCors("corsApp");
+app.Urls.Add("http://localhost:5000");
+//app.Urls.Add("https://localhost:7001");
 
 app.UseAuthentication();
 

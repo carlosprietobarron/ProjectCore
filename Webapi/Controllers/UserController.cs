@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Webapi.Controllers
 {
+    [Route("api/[controller]")]
     [AllowAnonymous]
     public class UserController: MyControllerBase
     {
@@ -26,6 +27,11 @@ namespace Webapi.Controllers
         [HttpGet]
         public async Task<ActionResult<UserData>> GetUser(){
             return await Mediator.Send(new CurrentUser.Execute());
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<UserData>> ModifyUser(UpdateUser.Execute data){
+            return await Mediator.Send(data);
         }
     }
 }

@@ -9,9 +9,9 @@ namespace Persistence.DapperConnection.Teacher
     public interface ITeacher
     {
         Task<IList<TeacherModel>> GetTeacherLIST();
-        Task<TeacherModel> GetTeacherById();
-        Task<int> newTeacher(TeacherModel model);
-        Task<int> uodateTEacher(TeacherModel model);
-        Task<int> deleteTeacher(TeacherModel model);
+        Task<TeacherModel> GetTeacherById(Guid techerId);
+        Task<int> newTeacher(string FirstName, string LastName, string Level);
+        Task<int> uodateTeacher(Guid TeacherId, string FirstName, string LastNHame);
+        Task<int> deleteTeacher(Guid techerId);
     }
 }

@@ -12,7 +12,7 @@ namespace Dominion
         public required string LastName { get; set; }
         public string? Level { get; set; }
         public byte[]? Photos { get; set; }
-
+        public DateTime? CreateDate { get; set; }
         public ICollection<CourseTeacher>? CoursesLinksLinks { get; set; }
     }
 }

@@ -31,6 +31,6 @@ namespace Persistence
         public DbSet<Teacher> Teacher { get; set; }
         public DbSet<CourseTeacher> CourseTeacher { get; set;}
         public DbSet<Price> Price { get; set; }
-
+        public DbSet<Document> Document { get; set; }
     }
 }

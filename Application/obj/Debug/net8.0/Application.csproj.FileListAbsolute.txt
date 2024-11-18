@@ -17,3 +17,4 @@
 /Users/carlosprieto/NET/ProjectCore/Application/obj/Debug/net8.0/refint/Application.dll
 /Users/carlosprieto/NET/ProjectCore/Application/obj/Debug/net8.0/Application.pdb
 /Users/carlosprieto/NET/ProjectCore/Application/obj/Debug/net8.0/ref/Application.dll
+/Users/carlosprieto/NET/ProjectCore/Application/obj/Debug/net8.0/Application.sourcelink.json

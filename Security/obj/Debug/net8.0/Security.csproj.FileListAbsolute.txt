@@ -19,3 +19,4 @@
 /Users/carlosprieto/NET/ProjectCore/Security/obj/Debug/net8.0/refint/Security.dll
 /Users/carlosprieto/NET/ProjectCore/Security/obj/Debug/net8.0/Security.pdb
 /Users/carlosprieto/NET/ProjectCore/Security/obj/Debug/net8.0/ref/Security.dll
+/Users/carlosprieto/NET/ProjectCore/Security/obj/Debug/net8.0/Security.sourcelink.json

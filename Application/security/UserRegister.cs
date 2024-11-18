@@ -19,7 +19,6 @@ namespace Application.security
         public class Execute: IRequest<UserData>{
             public string? FullName { get; set; }
             public required string UserName { get; set; }
-
             public required string Password { get; set; }
             public required string Email { get; set; }
             //public required string Token { get; set; }
@@ -61,6 +60,8 @@ namespace Application.security
                 };
 
                 var result = await _userManager.CreateAsync(user, request.Password);
+                var resultlist = await _userManager.GetRolesAsync(user);
+                var roles = new List<string>(resultlist);
 
                 if (result.Succeeded) {
                         return new UserData
@@ -68,7 +69,7 @@ namespace Application.security
                                     FullName = user.FullName,
                                     UserName = user.UserName,
                                     Email = user.Email,
-                                    Token = _jwtGenerator.CreateToken(user)
+                                    Token = _jwtGenerator.CreateToken(user, roles)
                                 };
                 }
 
